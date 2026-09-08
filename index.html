@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Vincent — Providencia, Santiago</title>
+
+<!-- ============================================================
+     PROTOTIPO BETA — CAFÉ VINCENT
+     Datos verificados en Google Maps y en Facebook el 07-09-2026:
+     dirección, horario, teléfono, rating, reseñas y mapa/CID real
+     (CID verificado en vivo: 0x9662c583a5ff1cb9:0xc418cf8819c5ecfc).
+     El Place ID entregado por Apify se re-verificó en vivo, no se usó
+     tal cual sin confirmar.
+     PENDIENTE / NUNCA INVENTADO:
+     - No se encontró Instagram real del local (se investigaron 3
+       cuentas "Vincent Café" que en la búsqueda parecían coincidir,
+       pero resultaron ser de Argentina, Uruguay y Paraguay — NINGUNA
+       se usó). El único perfil social confirmado con la MISMA
+       dirección y teléfono es un Facebook casi sin actividad desde
+       2020 ("Vincent Restaurante y Cafetería"), sí se usa ese link.
+     - Sin WhatsApp confirmado: el teléfono (2) 2895 2216 es fijo, no
+       hay wa.me asociado — no se muestra botón de WhatsApp.
+     - Sin app de delivery confirmada (no se encontró Rappi/Uber
+       Eats/PedidosYa para este local).
+     - Sin carta con precios vigentes: 3 fotos reales de pizarra de
+       menú ejecutivo (2021 y 2023, subidas por clientes a Google
+       Maps) muestran precios de $4.500 a $8.000, pero son demasiado
+       viejas para mostrarlas como precio actual — se listan los
+       platos reales, marcados "Consultar precio en el local".
+     - Pago: varias reseñas reales confirman que el local NO recibe
+       tarjeta, solo efectivo o transferencia — se avisa en Visítanos.
+     Fotos reales: 6 fotos sacadas de Google Maps (terraza, pizarra de
+     menú, té, sopa de entrada, cafés), ninguna de otro local.
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="loader"><span class="loader-mark">Vincent</span></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand" data-tab="inicio">
+      <span class="wordmark">Vincent</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><button class="nav-link active" data-tab="inicio">Inicio</button></li>
+      <li><button class="nav-link" data-tab="nosotros">Nosotros</button></li>
+      <li><button class="nav-link" data-tab="carta">Carta</button></li>
+      <li><button class="nav-link" data-tab="resenas">Reseñas</button></li>
+      <li><button class="nav-link" data-tab="visitanos">Visítanos</button></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn">Pedido <span class="cart-count" id="cartCount">0</span></button>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content">
+<section id="tab-inicio" class="tab-panel active" data-tab-panel="inicio">
+<section class="hero" id="top">
+  <div class="bg-photo">
+    <img src="fotos/terraza.jpg" alt="Terraza de Café Vincent con plantas y luces cálidas">
+  </div>
+  <span class="eyebrow reveal">Restaurante y cafetería de barrio · Providencia</span>
+  <h1 class="reveal">Una terraza tibia a pasos del <em>Parque Bustamante</em></h1>
+  <p class="tagline reveal">Menú ejecutivo casero, buen café, muy buena selección de té y esa sensación de fonda de barrio que ya casi no se encuentra — abierto los 7 días, desde 2020 en la misma esquina de Seminario.</p>
+  <div class="hero-info reveal">
+    <div class="hero-pill"><span class="status-dot" id="statusDot"></span> <span id="statusText">Consultando horario…</span></div>
+    <div class="hero-pill">★ <strong>4.4</strong> (444 opiniones)</div>
+    <div class="hero-pill"><strong>Seminario 64</strong>, Providencia</div>
+  </div>
+  <div class="cta-row reveal">
+    <button class="btn btn-solid" data-tab="carta">Ver la carta</button>
+    <button class="btn btn-outline" data-tab="visitanos">Cómo llegar</button>
+  </div>
+</section>
+</section>
+
+<section id="tab-nosotros" class="tab-panel" data-tab-panel="nosotros">
+<section id="nosotros">
+  <div class="wrap sobre">
+    <span class="eyebrow reveal">quiénes somos</span>
+    <h2 class="reveal">Un rincón de barrio que no pretende ser otra cosa</h2>
+    <p class="reveal">Café Vincent funciona en Seminario 64, a una cuadra del Parque Bustamante, con una terraza cubierta llena de plantas, faroles y mesas de mosaico — el tipo de lugar donde la gente del barrio llega, se sienta y se queda. Las reseñas reales de Google lo describen una y otra vez con las mismas palabras: acogedor, buena atención, ambiente agradable.</p>
+    <p class="reveal">La base es un menú ejecutivo del día — sopa o ensalada, plato de fondo y postre — con opciones caseras como pollo al horno, spaghetti al pesto, charquicán con huevo o zapallito relleno. El café es bueno, la selección de té sorprende para ser una cafetería de barrio, y en invierno prenden la estufita más cercana a tu mesa. Eso sí: solo efectivo o transferencia, no reciben tarjeta.</p>
+    <div class="badges-row reveal">
+      <span class="badge badge-a">Abierto 7 días</span>
+      <span class="badge badge-a">Terraza al aire libre</span>
+      <span class="badge badge-b">Menú ejecutivo casero</span>
+      <span class="badge badge-b">Buena selección de té</span>
+      <span class="badge badge-b">Accesible en silla de ruedas</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider reveal"><span class="mark">· V ·</span></div>
+
+<section style="background:var(--ink); color:#fff;">
+  <div class="wrap">
+    <div class="section-head dark reveal">
+      <span class="eyebrow">para chusmear</span>
+      <h2>La terraza</h2>
+    </div>
+    <div class="gallery-grid">
+      <figure class="reveal"><img src="fotos/terraza.jpg" alt="Terraza cubierta con plantas y mesas"><div class="gallery-tag">Nuestra terraza</div></figure>
+      <figure class="reveal"><img src="fotos/terraza-noche.jpg" alt="Terraza con faroles encendidos"><div class="gallery-tag">Con los faroles prendidos</div></figure>
+      <figure class="reveal"><img src="fotos/cafes.jpg" alt="Dos cappuccinos sobre mesa de mosaico"><div class="gallery-tag">Buen café</div></figure>
+      <figure class="reveal"><img src="fotos/te.jpg" alt="Té en tetera de vidrio"><div class="gallery-tag">Muy buena selección de té</div></figure>
+    </div>
+  </div>
+</section>
+</section>
+
+<section id="tab-carta" class="tab-panel" data-tab-panel="carta">
+<section id="carta" style="background:var(--paper);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">la carta</span>
+      <h2>Nuestra carta</h2>
+    </div>
+    <div class="menu-tabs" id="menuTabs"></div>
+    <div id="menuPanels"></div>
+    <p class="menu-note">Los precios se consultan directo en el local — las únicas fotos de pizarra que encontramos son de 2021 y 2023, muy viejas para mostrarlas como precio vigente.</p>
+  </div>
+</section>
+</section>
+
+<section id="tab-resenas" class="tab-panel" data-tab-panel="resenas">
+<section id="resenas">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">lo que dicen</span>
+      <h2>444 opiniones en Google · 4.4 / 5</h2>
+    </div>
+    <div class="resenas-grid">
+      <article class="resena-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Excelente restaurante, comida deliciosa al estilo chileno, variado menú con una gran relación precio calidad, emplazado en un entorno hermoso de un gran barrio, 100% recomendable."</p>
+        <footer>
+          <div class="resena-avatar">NC</div>
+          <div class="resena-meta"><strong>Naim Chamas</strong>Local Guide · hace 7 meses</div>
+        </footer>
+      </article>
+      <article class="resena-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"En total honestidad, llegué por accidente al lugar… de pronto, me hallé dentro de un lugar tibio, con aroma a pesto recién hecho y con música de los…"</p>
+        <footer>
+          <div class="resena-avatar">FB</div>
+          <div class="resena-meta"><strong>Frank Besnier</strong>Local Guide · hace 9 meses</div>
+        </footer>
+      </article>
+      <article class="resena-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Rico el café y la tarta. Agradable lugar. Amable el personal. Abren temprano. Prendieron la estufita más cercana a la mesa donde me senté. Bkn."</p>
+        <footer>
+          <div class="resena-avatar">TV</div>
+          <div class="resena-meta"><strong>Teresa Valdés</strong>Local Guide · hace 4 años</div>
+        </footer>
+      </article>
+    </div>
+    <div class="cta-row reveal" style="justify-content:center;">
+      <a class="btn btn-solid" href="https://search.google.com/local/writereview?placeid=0x9662c583a5ff1cb9:0xc418cf8819c5ecfc" target="_blank" rel="noopener">★ Escribir una opinión en Google</a>
+    </div>
+  </div>
+</section>
+</section>
+
+<section id="tab-visitanos" class="tab-panel" data-tab-panel="visitanos">
+<section class="visit" id="visitanos" style="background:linear-gradient(180deg, #241f1a, var(--moss-dark)); color:#fff;">
+  <div class="wrap visit-grid">
+    <div>
+      <div class="section-head dark reveal" style="text-align:left; margin-bottom:32px;">
+        <span class="eyebrow">te esperamos</span>
+        <h2>Visítanos</h2>
+      </div>
+      <div class="visit-block reveal"><h3>Dirección</h3><p>Seminario 64, Providencia, Región Metropolitana</p></div>
+      <div class="visit-block reveal">
+        <h3>Horario</h3>
+        <p>Todos los días, 9:00 a 21:00h</p>
+        <div class="visit-pill"><span class="status-dot" id="statusDot2"></span> <span id="statusText2">Consultando horario…</span></div>
+      </div>
+      <div class="visit-block reveal">
+        <h3>Pago</h3>
+        <p>Solo efectivo o transferencia — no reciben tarjeta (confirmado en varias reseñas reales de clientes).</p>
+      </div>
+      <div class="visit-block reveal">
+        <h3>Contacto</h3>
+        <div class="contact-links">
+          <a class="contact-pill" href="tel:+56228952216">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (2) 2895 2216
+          </a>
+          <a class="contact-pill" href="https://www.facebook.com/p/Vincent-Restaurante-y-Cafeter%C3%ADa-100063617377995/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.88v-6.99H7.9V12h2.5V9.8c0-2.47 1.47-3.84 3.72-3.84 1.08 0 2.21.19 2.21.19v2.43h-1.24c-1.23 0-1.61.76-1.61 1.54V12h2.74l-.44 2.89h-2.3v6.99A10 10 0 0 0 22 12z"/></svg>
+            Facebook
+          </a>
+        </div>
+        <p class="menu-note" style="margin-top:10px;">No encontramos Instagram ni WhatsApp confirmados para este local — si tienen uno activo, avísenos para agregarlo.</p>
+      </div>
+      <div class="cta-row reveal" style="justify-content:flex-start;">
+        <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=Seminario+64,+Providencia,+Santiago&destination_place_id=0x9662c583a5ff1cb9:0xc418cf8819c5ecfc" target="_blank" rel="noopener">Cómo llegar</a>
+        <a class="btn btn-outline" style="border-color:rgba(255,255,255,0.5); color:#fff;" href="https://waze.com/ul?q=Seminario%2064%2C%20Providencia&navigate=yes" target="_blank" rel="noopener">Ir con Waze</a>
+      </div>
+    </div>
+    <div class="map-frame">
+      <!-- Embed real generado desde la ficha de Google Maps del negocio -->
+      <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.0!2d-70.6300571!3d-33.4391478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c583a5ff1cb9%3A0xc418cf8819c5ecfc!2sCafe%20Vincent!5e0!3m2!1ses-419!2scl!4v1788700000000!5m2!1ses-419!2scl" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  </div>
+</section>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="wordmark footer-mark">Vincent</span>
+    <p class="footer-tag">Restaurante y cafetería de barrio · Providencia</p>
+    <p class="footer-contact">Seminario 64, Providencia · <a href="tel:+56228952216">(2) 2895 2216</a></p>
+    <div class="footer-badges">
+      <span class="badge badge-b" style="border-color:rgba(255,255,255,0.35); color:#fff; background:rgba(255,255,255,0.08);">Menú ejecutivo casero</span>
+      <span class="badge badge-b" style="border-color:rgba(255,255,255,0.35); color:#fff; background:rgba(255,255,255,0.08);">Abierto 7 días</span>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-links">
+      <a href="https://www.facebook.com/p/Vincent-Restaurante-y-Cafeter%C3%ADa-100063617377995/" target="_blank" rel="noopener">Facebook</a>
+      <span>·</span>
+      <span>Sitio demo diseñado con cariño</span>
+    </div>
+  </div>
+</footer>
+
+<!-- OVERLAY CARRITO -->
+<div class="overlay" id="cartOverlay">
+  <div class="cart-panel">
+    <button class="close-x" id="cartCloseBtn">&times;</button>
+    <h3>Tu pedido</h3>
+    <div id="cartLines"><p class="cart-empty">Todavía no agregaste nada.</p></div>
+    <div class="cart-total"><span>Total</span><span class="mono" id="cartTotal">A consultar</span></div>
+    <a class="btn btn-solid" style="justify-content:center; margin-top:14px;" id="checkoutBtn" href="tel:+56228952216">Consultar por teléfono</a>
+  </div>
+</div>
+
+<!-- OVERLAY MODAL PRODUCTO -->
+<div class="overlay modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <button class="close-x" id="modalCloseBtn">&times;</button>
+    <div class="modal-photo" id="modalPhoto" style="display:none;"></div>
+    <h3 id="modalName"></h3>
+    <div class="price mono" id="modalPrice"></div>
+    <p class="desc" id="modalDesc"></p>
+    <button class="btn btn-solid" style="width:100%; justify-content:center;" id="modalAddBtn">Agregar a la bolsa</button>
+  </div>
+</div>
+
+<!-- WIDGET FLOTANTE -->
+<div class="float-widget">
+  <a class="float-btn facebook" href="https://www.facebook.com/p/Vincent-Restaurante-y-Cafeter%C3%ADa-100063617377995/" target="_blank" rel="noopener" aria-label="Abrir Facebook">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.88v-6.99H7.9V12h2.5V9.8c0-2.47 1.47-3.84 3.72-3.84 1.08 0 2.21.19 2.21.19v2.43h-1.24c-1.23 0-1.61.76-1.61 1.54V12h2.74l-.44 2.89h-2.3v6.99A10 10 0 0 0 22 12z"/></svg>
+  </a>
+  <a class="float-btn phone" href="tel:+56228952216" aria-label="Llamar por teléfono">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  </a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
