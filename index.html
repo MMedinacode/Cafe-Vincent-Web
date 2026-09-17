@@ -53,7 +53,7 @@
        Maps) muestran precios de $4.500 a $8.000, pero son demasiado
        viejas para mostrarlas como precio actual — se listan los
        platos reales, marcados "Consultar precio en el local".
-     - Pago: varias reseñas reales confirman que el local NO recibe
+     - Pago: varias reseñas confirman que el local NO recibe
        tarjeta, solo efectivo o transferencia — se avisa en Visítanos.
      Fotos reales: 6 fotos sacadas de Google Maps (terraza, pizarra de
      menú, té, sopa de entrada, cafés), ninguna de otro local.
@@ -63,6 +63,83 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="pulido.css">
+
+<!-- ══════════════════════════════════════════════════════════════
+     Datos estructurados (schema.org)
+     ══════════════════════════════════════════════════════════════
+     Esto no se ve en la página: lo lee Google. Le dice que acá hay
+     un negocio con nombre, dirección, teléfono y horario, en vez de
+     un texto cualquiera. Es lo que permite salir como ficha y no
+     sólo como un resultado más.
+
+     Todo lo de abajo ya está publicado en esta misma página. Si un
+     dato no estaba, el campo simplemente no aparece. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Café Vincent",
+  "description": "Café Vincent. Una terraza tibia a pasos del Parque Bustamante. 4.4★ con 444 opiniones en Google.",
+  "image": "https://mmedinacode.github.io/Cafe-Vincent-Web/fotos/terraza.jpg",
+  "url": "https://mmedinacode.github.io/Cafe-Vincent-Web/",
+  "telephone": "+56228952216",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Seminario 64",
+    "addressLocality": "Providencia",
+    "addressRegion": "Región Metropolitana",
+    "addressCountry": "CL"
+  },
+  "sameAs": [
+    "https://www.facebook.com/p"
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "09:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Tuesday",
+      "opens": "09:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "09:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Thursday",
+      "opens": "09:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "09:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "09:00",
+      "closes": "21:00"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -115,8 +192,8 @@
   <div class="wrap sobre">
     <span class="eyebrow reveal">quiénes somos</span>
     <h2 class="reveal">Un rincón de barrio que no pretende ser otra cosa</h2>
-    <p class="reveal">Café Vincent funciona en Seminario 64, a una cuadra del Parque Bustamante, con una terraza cubierta llena de plantas, faroles y mesas de mosaico — el tipo de lugar donde la gente del barrio llega, se sienta y se queda. Las reseñas reales de Google lo describen una y otra vez con las mismas palabras: acogedor, buena atención, ambiente agradable.</p>
-    <p class="reveal">La base es un menú ejecutivo del día — sopa o ensalada, plato de fondo y postre — con opciones caseras como pollo al horno, spaghetti al pesto, charquicán con huevo o zapallito relleno. El café es bueno, la selección de té sorprende para ser una cafetería de barrio, y en invierno prenden la estufita más cercana a tu mesa. Eso sí: solo efectivo o transferencia, no reciben tarjeta.</p>
+    <p class="reveal">Café Vincent funciona en Seminario 64, a una cuadra del Parque Bustamante, con una terraza cubierta llena de plantas, faroles y mesas de mosaico — el tipo de lugar donde la gente del barrio llega, se sienta y se queda. Las reseñas de Google lo describen una y otra vez con las mismas palabras: acogedor, buena atención, ambiente agradable.</p>
+    <p class="reveal">La base es un menú ejecutivo del día — sopa o ensalada, plato de fondo y postre — con opciones caseras como pollo al horno, spaghetti al pesto, charquicán con huevo o zapallito relleno. El café es bueno, la selección de té sorprende para ser una cafetería de barrio, y en invierno prenden la estufita más cercana a tu mesa. Eso sí: solo efectivo o transferencia, no recibimos tarjeta.</p>
     <div class="badges-row reveal">
       <span class="badge badge-a">Abierto 7 días</span>
       <span class="badge badge-a">Terraza al aire libre</span>
@@ -155,7 +232,7 @@
     </div>
     <div class="menu-tabs" id="menuTabs"></div>
     <div id="menuPanels"></div>
-    <p class="menu-note">Los precios se consultan directo en el local — las únicas fotos de pizarra que encontramos son de 2021 y 2023, muy viejas para mostrarlas como precio vigente.</p>
+    <p class="menu-note">Los precios se consultan en el local.</p>
   </div>
 </section>
 </section>
@@ -216,7 +293,7 @@
       </div>
       <div class="visit-block reveal">
         <h3>Pago</h3>
-        <p>Solo efectivo o transferencia — no reciben tarjeta (confirmado en varias reseñas reales de clientes).</p>
+        <p>Solo efectivo o transferencia — no recibimos tarjeta .</p>
       </div>
       <div class="visit-block reveal">
         <h3>Contacto</h3>
@@ -230,7 +307,7 @@
             Facebook
           </a>
         </div>
-        <p class="menu-note" style="margin-top:10px;">No encontramos Instagram ni WhatsApp confirmados para este local — si tienen uno activo, avísenos para agregarlo.</p>
+        
       </div>
       <div class="cta-row reveal" style="justify-content:flex-start;">
         <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=Seminario+64,+Providencia,+Santiago&destination_place_id=0x9662c583a5ff1cb9:0xc418cf8819c5ecfc" target="_blank" rel="noopener">Cómo llegar</a>
@@ -306,5 +383,7 @@
 <script>window.REDES={"intro": "Su página de Facebook es el único canal social que se les encontró, y está casi sin actividad desde 2020.", "facebook": {"url": "https://www.facebook.com/p/Vincent-Restaurante-y-Cafeter%C3%ADa-100063617377995/", "nombre": "Vincent Restaurante y Cafetería", "nota": "Sin publicaciones nuevas desde 2020 — justo el tipo de cosa que una página propia resuelve."}, "telefono": {"numero": "+56228952216", "nota": "Teléfono fijo."}};</script>
 <script src="redes.js"></script>
 <script src="flotantes.js"></script>
+<script src="vida.js"></script>
+<script src="pulido.js"></script>
 </body>
 </html>
