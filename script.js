@@ -25,15 +25,15 @@ const MENU = {
   platos: {
     label: 'Platos y Postres',
     groups: [{ title: 'Destacados reales de la carta', items: [
-      { n: 'Sopa de Entrada', d: 'Con sopaipilla — uno de los "platos destacados" reales en Google Maps', img: 'fotos/sopa-entrada.jpg' },
-      { n: 'Churrasco Italiano', d: 'Otro destacado real de la carta' },
+      { n: 'Sopa de Entrada', d: 'Con sopaipilla — uno de nuestros platos destacados', img: 'fotos/sopa-entrada.jpg' },
+      { n: 'Churrasco Italiano', d: 'Otro destacado de la carta' },
       { n: 'Ravioles' },
-      { n: 'Natilla', d: '"Superó con creces" según una reseña real de Google' },
+      { n: 'Natilla', d: '"Superó con creces", dice una reseña de Google' },
     ]}]
   },
   cafeYte: {
     label: 'Café y Té',
-    groups: [{ title: '"Muy buena selección de té" y "buen café" — aspectos destacados reales en Google', items: [
+    groups: [{ title: '"Muy buena selección de té" y "buen café" — de lo que más nos destacan', items: [
       { n: 'Té en tetera', img: 'fotos/te.jpg' },
       { n: 'Café espresso' },
       { n: 'Cappuccino', img: 'fotos/cafes.jpg' },
@@ -130,7 +130,7 @@ function openModal(item){
   currentItem = item;
   document.getElementById('modalName').textContent = item.n;
   document.getElementById('modalPrice').textContent = money(item.p);
-  document.getElementById('modalDesc').textContent = item.d || 'Preparado real de la carta de Café Vincent.';
+  document.getElementById('modalDesc').textContent = item.d || 'De nuestra carta.';
   const photoWrap = document.getElementById('modalPhoto');
   if(item.img){
     photoWrap.innerHTML = '';
